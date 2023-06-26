@@ -24,9 +24,11 @@ pipeline {
             }
        }
 
+        stage('Deploying Application using Ansible') {
+           steps {
+                sh 'export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook --private-key=/home/ubuntu/.ssh/tt-CitiBank-20th-June-23.pem -i host_inventory deploy-artifact.yml'
+            }
+        }
      
-
-         
-
    }
 }
