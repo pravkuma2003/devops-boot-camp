@@ -39,8 +39,7 @@ pipeline {
 
         stage ('Analyzing Code Quality'){
           steps {
-             sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=pravkuma2003_devops-boot-camp -Dsonar.organization=pravkuma2003 -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io
--Dsonar.login=dc4f1a3c4ae276daa787fee6f01938c6415d2073'
+             sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=pravkuma2003_devops-boot-camp -Dsonar.organization=pravkuma2003 -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=dc4f1a3c4ae276daa787fee6f01938c6415d2073'
 
            }
        }
